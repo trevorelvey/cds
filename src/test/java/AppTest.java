@@ -25,4 +25,13 @@ public class AppTest extends FluentTest {
     goTo("http://localhost:4567/");
     assertThat(pageSource()).contains("*~mY cDz~*");
   }
+
+  @Test
+  public void CDIsCreatedTest() {
+    goTo("http://localhost:4567/");
+    click("a", withText("Add a new CD"));
+    fill("#title").with("Tragic Kingdom");
+    submit(".btn");
+    assertThat(pageSource()).contains("Your CD has been saved.");
+  }
 }
