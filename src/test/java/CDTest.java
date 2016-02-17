@@ -28,4 +28,16 @@ public class CDTest {
     CD myCD = new CD("Tragic Kingdom");
     assertEquals(CD.all().size(), myCD.getID());
   }
+
+  @Test
+  public void findID_returnsNullWhenNoCDFound_null() {
+    assertTrue(CD.findID(999) == null);
+  }
+
+  @Test
+  public void clear_emptiesAllCDsFromArrayList() {
+    CD myTask = new CD("Tragic Kingdom");
+    CD.clear();
+    assertEquals(CD.all().size(), 0);
+  }
 }

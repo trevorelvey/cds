@@ -24,4 +24,15 @@ public class CD {
     return mID;
   }
 
+  public static CD findID(int id) {
+    try {
+      return cdList.get(id - 1);
+    } catch (IndexOutOfBoundsException e) {
+      return null;
+    }
+  }
+
+  public static void clear() {
+  cdList.clear();
+  }
 }
