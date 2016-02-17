@@ -9,4 +9,8 @@ public class CD {
     mTitle = title;
   }
 
+  public String getTitle(){
+    return mTitle;
+  }
+
 }

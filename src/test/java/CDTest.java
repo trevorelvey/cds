@@ -8,4 +8,10 @@ public class CDTest {
     CD myCD = new CD("Tragic Kingdom");
     assertEquals(true, myCD instanceof CD);
   }
+
+  @Test
+  public void cd_instantiatesWithTitle_true() {
+    CD myCD = new CD("Tragic Kingdom");
+    assertEquals("Tragic Kingdom", myCD.getTitle());
+  }
 }
