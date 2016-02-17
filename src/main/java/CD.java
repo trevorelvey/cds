@@ -7,10 +7,15 @@ public class CD {
 
   public CD(String title){
     mTitle = title;
+    cdList.add(this);
   }
 
   public String getTitle(){
     return mTitle;
+  }
+
+  public static ArrayList<CD> all() {
+    return cdList;
   }
 
 }

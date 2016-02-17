@@ -14,4 +14,12 @@ public class CDTest {
     CD myCD = new CD("Tragic Kingdom");
     assertEquals("Tragic Kingdom", myCD.getTitle());
   }
+
+  @Test
+  public void all_returnsAllIntancesOfCD_true() {
+    CD firstCD = new CD("Tragic Kingdom");
+    CD secondCD = new CD("Is The Is Are");
+    assertTrue(CD.all().contains(firstCD));
+    assertTrue(CD.all().contains(secondCD));
+  }
 }
