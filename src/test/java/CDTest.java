@@ -22,4 +22,10 @@ public class CDTest {
     assertTrue(CD.all().contains(firstCD));
     assertTrue(CD.all().contains(secondCD));
   }
+
+  @Test
+  public void newID_CDInstantiatesWithAnID_true() {
+    CD myCD = new CD("Tragic Kingdom");
+    assertEquals(CD.all().size(), myCD.getID());
+  }
 }
